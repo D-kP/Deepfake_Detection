@@ -307,16 +307,16 @@ def extract_frame_features_inference(video_path):
                         actual_frames_extracted += 1
 
                         # Display the extracted face
-                        plt.subplot(1, 5, (actual_frames_extracted - 1) % 5 + 1)
-                        plt.imshow(cv2.cvtColor(face_resized, cv2.COLOR_BGR2RGB))
-                        plt.title(f'Frame {actual_frames_extracted}')
-                        plt.axis('off')
+                        # plt.subplot(1, 5, (actual_frames_extracted - 1) % 5 + 1)
+                        # plt.imshow(cv2.cvtColor(face_resized, cv2.COLOR_BGR2RGB))
+                        # plt.title(f'Frame {actual_frames_extracted}')
+                        # plt.axis('off')
                         
-                        # Update display every 5 frames or when we reach MAX_FRAMES_FOR_INFERENCE
-                        if actual_frames_extracted % 5 == 0 or actual_frames_extracted == MAX_FRAMES_FOR_INFERENCE:
-                            plt.tight_layout()
-                            plt.draw()
-                            plt.pause(0.1)
+                        # # Update display every 5 frames or when we reach MAX_FRAMES_FOR_INFERENCE
+                        # if actual_frames_extracted % 5 == 0 or actual_frames_extracted == MAX_FRAMES_FOR_INFERENCE:
+                        #     plt.tight_layout()
+                        #     plt.draw()
+                        #     plt.pause(0.1)
 
                         if len(batch_frames_for_xception) >= BATCH_SIZE_FOR_FRAME_PROCESSING or actual_frames_extracted >= MAX_FRAMES_FOR_INFERENCE:
                             if batch_frames_for_xception:
