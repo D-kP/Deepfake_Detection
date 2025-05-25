@@ -9,3 +9,4 @@ moviepy==1.0.3
 tensorflow==2.18.0
 soundfile==0.13.1
 matplotlib==3.10.0
+gunicorn
